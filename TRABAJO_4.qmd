@@ -52,3 +52,5 @@ graph3 <- proc_data %>%
   geom_bar() +   xlab("Búsqueda de trabajo") +   ylab("Cantidad") +    labs(fill = "Sexo") +   scale_fill_discrete(labels = c('Hombre', 'Mujer'))
 graph3
 ```
+
+\##

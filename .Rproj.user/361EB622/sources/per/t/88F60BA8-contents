@@ -1,16 +1,27 @@
-La urgencia de mirar hacia las consecuencias: labores de cuidado asignadas desde la colonia a mujeres en América Latina
+---
+title: "TRABAJO_4"
+author: "Alondra Labra"
+format: html
+editor: visual
+bibliography: references.bib
+---
 
-{r}
-load("C:/Users/alond/Desktop/OFC-R/Trabajo-R-UAH-2024/PRACTICO-R2/input/data/proc_data.RData")
+## 
 
-{r}
-library(pacman)
-p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, summarytools, kableExtra, sjPlot, corrplot, sessioninfo, ggplot2)
+## La urgencia de mirar hacia las consecuencias: labores de cuidado asignadas desde la colonia a mujeres en América Latina
 
+```{r}
+load("INPUT/proc_data.RData")
+```
+
+```{r}
+library(pacman) 
+p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, summarytools, kableExtra, sjPlot, corrplot, sessioninfo, ggplot2) 
+```
 
 En las últimas décadas ha surgido desde el planteamiento de la teoría feminista una serie de demandas que hacen alusión a distintas formas en las que la violencia de género viene a estar presente en la estructura social latinoamericana. Estas formas se expresan en ámbitos políticos, públicos, privados, culturales; es de alguna forma una violencia sistematizada. En particular, este artículo busca profundizar acerca de una de las formas de violencia de género que se expresa en la vida privada y se condice con las labores de cuidado asignadas a las mujeres como un trabajo no remunerado y que viene a instaurarse desde la colonización, cuyas víctimas fueron mujeres indígenas, tal como lo expresa Mendoza en [@c.mendoza2023], de forma específica:
-  
-  "el posicionamiento de madres indígenas que debían hacerse cargo de sus hijos mestizos y volverse el pilar fundamental de la familia fue un fenómeno común en toda la región que dejó a la mujer como principal sustento del cuidado familiar y responsable de ese tipo de labores". [@c.mendoza2023]
+
+*"el posicionamiento de madres indígenas que debían hacerse cargo de sus hijos mestizos y volverse el pilar fundamental de la familia fue un fenómeno común en toda la región que dejó a la mujer como principal sustento del cuidado familiar y responsable de ese tipo de labores". [@c.mendoza2023]*
 
 Para efectos de esta investigación, se entenderá que a menor reconocimiento de las labores de cuidado como un trabajo, mayor es el índice de enfermedades desarrolladas por mujeres cuidadoras, a raíz de lo que debe ser entendido como estrés laboral dada la carencia de normas que regulen el espacio de trabajo (el hogar).
 
@@ -22,24 +33,24 @@ Al mismo tiempo, las mujeres que se ven envueltas dentro de este fenómeno se ve
 
 Por otra parte, debe considerarse el cuidado de adultos mayores como parte de una labor doméstica que recae en las mujeres, mayoritariamente. Si bien han surgido distintas instancias de creación de programas al fomento del resguardo de la salud para adultos mayores desde los inicios de los 2000's, según se indica en la agenda [@nicolebidegainponte2017], donde se exponen distintos parámetros para el resguardo de la salud de adultos mayores, nuevamente quedan exentas las personas cuya responsabilidad social es asumir el acompañamiento y el cuidado de estas personas en distintos niveles de dependencia.
 
-En último lugar, cabe recalcar que con frecuencia que la realidad de los hogares donde deben ejercerse roles de cuidado tienden a presentar bajos recursos económicos [@aliciabárcena2021] de modo que, en caso de hogares monoparentales sostenidos por mujeres, la carga pasa a duplicarse, empeorando las condiciones. Por otra parte, las políticas impulsadas por la inserción laboral al grupo de mujeres bajo la misión de una autonomía económica, esconde detrás las mayores cargas de trabajo dadas las condiciones expuestas con anterioridad a las que se ven enfrentadas las mujeres que cumplirían esta doble labor.
+En último lugar, cabe recalcar que con frecuencia que la realidad de los hogares donde deben ejercerse roles de cuidado tienden a presentar bajos recursos económicos [@aliciabarcenaAutonomiaEconomicaMujeres2021] de modo que, en caso de hogares monoparentales sostenidos por mujeres, la carga pasa a duplicarse, empeorando las condiciones. Por otra parte, las políticas impulsadas por la inserción laboral al grupo de mujeres bajo la misión de una autonomía económica, esconde detrás las mayores cargas de trabajo dadas las condiciones expuestas con anterioridad a las que se ven enfrentadas las mujeres que cumplirían esta doble labor.
 
 En último lugar, lo que se busca llevar a cabo con esta investigación es la visibilización de un fenómeno precarizador de la vida de las trabajadoras del cuidado. Lo anterior da cuenta de la urgencia que tiene el desarrollo de políticas y programas de intervención con el propósito de regularizar y reconocer esta labor, pues, es finalmente desde la esfera pública que los efectos de esta problemática pueden transformarse, y ayudar a disminuir los níveles de depresión, estrés u otras enfermedades que pueden derivarse por las condiciones del trabajo de cuidados. 
 
 Para lograr llevar a cabo un análisis sustentado de el tema propuesto, se presentará la siguiente tabla que trabaja con una base la base de datos CASEN 2022. En la tabla encontramos datos que sustentan que la búsqueda de trabajo suele verse impedida por las labores de cuidado y por el trabajo doméstico de manera tendenciosa en el grupo de mujeres. Esto se debe a una femeneización del trabajo doméstico acorde a las revisiones realizzadas anteriormente en la asginación de roles y estereotipos de género. Pues, la tabla nos muestra que mientras un grupo de 280 hombres reconocen dedicarse al trabajo doméstico, 7255 mujeres declaran hacerlo y por esta razón que no han buscado trabajo. Es decir, tan sólo el 3% de hombres se dedican al trabajo doméstico en relación a las mujeres.
 
-{r}
-tabla <- sjt.xtab(proc_data$razon, proc_data$sexo, encoding = "UTF-8")
+```{r}
+tabla <- sjt.xtab(proc_data$razon, proc_data$sexo, encoding = "UTF-8") 
 tabla
+```
 
 Además, el siguiente gráfico nos proporciona información para sustentar este fenómeno en la medida que las mujeres corresponde al grupo con menor recurrencia a buscar un trabajo. Siendo quienes buscan un trabajo con menor recurrencia en al menos un 25% de los casos en relación a los hombres.
 
-{r}
-graph3 <- proc_data %>% ggplot(aes(x = busc_trab, fill = sexo)) + 
-  geom_bar() +
-  xlab("Búsqueda de trabajo") +
-  ylab("Cantidad") + 
-  labs(fill = "Sexo") +
-  scale_fill_discrete(labels = c('Hombre', 'Mujer'))
+```{r}
+graph3 <- proc_data %>% 
+  ggplot(aes(x = busc_trab, fill = sexo)) +    
+  geom_bar() +   xlab("Búsqueda de trabajo") +   ylab("Cantidad") +    labs(fill = "Sexo") +   scale_fill_discrete(labels = c('Hombre', 'Mujer'))
 graph3
+```
 
+\##

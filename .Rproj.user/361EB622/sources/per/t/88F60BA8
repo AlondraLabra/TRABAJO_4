@@ -3,7 +3,7 @@
     "path": "C:/Users/alond/Desktop/OFC-R/TRABAJO_4/TRABAJO_4.qmd",
     "project_path": "TRABAJO_4.qmd",
     "type": "quarto_markdown",
-    "hash": "556471284",
+    "hash": "782338926",
     "contents": "",
     "dirty": false,
     "created": 1717535010000.0,
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "7301:2623.63623046875",
+        "rmdVisualModeLocation": "268:0",
         "cursorPosition": "14,0",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1717536233,
+    "lastKnownWriteTime": 1717541542,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1717536233642,
+    "last_content_update": 1717541542336,
     "read_only": false,
     "read_only_alternatives": []
 }
