@@ -1,0 +1,42 @@
+"0","knitreg(list(reg4, reg5), 
+        custom.model.names = c(""Modelo 1"",
+                               ""Modelo 2""),
+        custom.note = ""*** p < 0.001; ** p < 0.01; * p < 0.05"",
+        custom.coef.names = c(""Intercepto"", 
+                              ""razon"",
+                              ""Mujer <br> <i>(Ref. Hombre)</i>"",
+                              ""salario"",
+                              ""edad25-34 años"",
+                              ""edad35-44 años"",
+                              ""edad45-54 años"",
+                              ""edad55 o más años""),
+        caption = ""Razones por para la búsqueda de trabajo según edad y sexo"",
+        caption.above = TRUE)
+"
+"1","
+===========================================================
+                                 Modelo 1      Modelo 2    
+-----------------------------------------------------------
+Intercepto                           2.00 ***      1.47 ***
+                                    (0.00)        (0.01)   
+razon                               -0.00                  
+                                    (0.00)                 
+Mujer <br> <i>(Ref. Hombre)</i>     -0.00                  
+                                    (0.00)                 
+salario                                           -0.00 ***
+                                                  (0.00)   
+edad25-34 años                                     0.05 ***
+                                                  (0.01)   
+edad35-44 años                                     0.07 ***
+                                                  (0.01)   
+edad45-54 años                                     0.06 ***
+                                                  (0.01)   
+edad55 o más años                                 -0.04 ***
+                                                  (0.01)   
+-----------------------------------------------------------
+R^2                                  0.50          0.01    
+Adj. R^2                             0.50          0.01    
+Num. obs.                        72214         61284       
+===========================================================
+*** p < 0.001; ** p < 0.01; * p < 0.05
+"

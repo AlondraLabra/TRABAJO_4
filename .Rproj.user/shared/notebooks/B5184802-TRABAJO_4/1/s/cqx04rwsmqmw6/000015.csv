@@ -1,0 +1,12 @@
+"0","graph3
+"
+"2","Warning:"
+"2"," [38;5;252mRemoved 121548 rows containing non-finite values (`stat_count()`).[39m
+"
+"2","Warning:"
+"2"," [38;5;252mThe following aesthetics were dropped during statistical transformation: [32mfill[38;5;252m
+[36mℹ[38;5;252m This can happen when ggplot fails to infer the correct grouping structure in the
+  data.
+[36mℹ[38;5;252m Did you forget to specify a `group` aesthetic or to convert a numerical variable
+  into a factor?[39m
+"

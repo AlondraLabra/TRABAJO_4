@@ -16,7 +16,7 @@ load("INPUT/proc_data.RData")
 
 ```{r}
 library(pacman) 
-p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, summarytools, kableExtra, sjPlot, corrplot, sessioninfo, ggplot2) 
+p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, summarytools, kableExtra, sjPlot, corrplot, sessioninfo, ggplot2, texreg) 
 ```
 
 En las últimas décadas ha surgido desde el planteamiento de la teoría feminista una serie de demandas que hacen alusión a distintas formas en las que la violencia de género viene a estar presente en la estructura social latinoamericana. Estas formas se expresan en ámbitos políticos, públicos, privados, culturales; es de alguna forma una violencia sistematizada. En particular, este artículo busca profundizar acerca de una de las formas de violencia de género que se expresa en la vida privada y se condice con las labores de cuidado asignadas a las mujeres como un trabajo no remunerado y que viene a instaurarse desde la colonización, cuyas víctimas fueron mujeres indígenas, tal como lo expresa Mendoza en [@c.mendoza2023], de forma específica:
@@ -49,8 +49,68 @@ Además, el siguiente gráfico nos proporciona información para sustentar este 
 ```{r}
 graph3 <- proc_data %>% 
   ggplot(aes(x = busc_trab, fill = sexo)) +    
-  geom_bar() +   xlab("Búsqueda de trabajo") +   ylab("Cantidad") +    labs(fill = "Sexo") +   scale_fill_discrete(labels = c('Hombre', 'Mujer'))
+  geom_bar() +  
+  xlab("Búsqueda de trabajo") +
+  ylab("Cantidad") +
+  labs(fill = "Sexo") +
+  scale_fill_discrete(labels = c('Hombre', 'Mujer'))
 graph3
 ```
 
-\##
+A continuación se presentan modelos de regresiones lineales en primera instancia para conocer los niveles de asociación y dependencia de entre razón y sexo respectivamente. En segundo lugar se aplicó una regresión lineal simple para conocer estos mismos aspectos entre el salario y la edad, elemento que servirá en el análisis en función.
+
+```{r}
+reg1 <- lm(razon ~ sexo, data=proc_data)
+
+knitreg(list(reg1))
+
+```
+
+Este modelo nos indica que como tal no existe una relación entre las variable razón y sexo, esta primera variable funciona de manera tal que más cerca del 1, se refiere a que la persona no ha buscado un trabajo remunerado dado que se dedida a trabajo doméstico o de cuidados. En este caso, nos indica que no hay una asociación entre las variables sexo y razón que se pueda fundamentar en los trabajos de cuidados y crianza.
+
+```{r}
+reg2 <-  lm(salario ~ sexo, data=proc_data)
+
+knitreg(list(reg2))
+
+```
+
+En esta regresión se puede observar que al mirar un modelo de regresión lineal entre la variable salario y la variable sexo, no se puede establecer una relación completamente signicativa, sin embargo, esto explicaría en al menos un 50% el fenómeno de que la variable salario depende del sexo de la persona.
+
+```{r}
+
+reg3 <- lm(busc_trab ~ sexo, data=proc_data)
+knitreg(list(reg3))
+```
+
+Este modelo nos explica que hay una tendencia en la búsqueda de trabajo más elevada hacia el grupo de hombres, sin embargo no hay un comportamiento significativo en las variables que pueda explicar si es efectiva la dependencia de la búsqueda de trabajo en función del sexo.
+
+A continuación se presenta un modelo de regresión lineal múltiple, con el que se busca indagar de manera simultánea las incidencias de distintas variables en el fenómeno de la permanencia en el trabajo doméstico y de crianza.
+
+```{r}
+reg4 <- lm(busc_trab ~ razon + sexo, data=proc_data)
+reg5 <- lm(sexo ~ salario + edad, data=proc_data)
+
+knitreg(list(reg4))
+knitreg(list(reg5))
+
+
+knitreg(list(reg4, reg5), 
+        custom.model.names = c("Modelo 1",
+                               "Modelo 2"),
+        custom.note = "*** p < 0.001; ** p < 0.01; * p < 0.05",
+        custom.coef.names = c("Intercepto", 
+                              "razon",
+                              "Mujer <br> <i>(Ref. Hombre)</i>",
+                              "salario",
+                              "edad25-34 años",
+                              "edad35-44 años",
+                              "edad45-54 años",
+                              "edad55 o más años"),
+        caption = "Razones por para la búsqueda de trabajo según edad y sexo",
+        caption.above = TRUE)
+```
+
+En este caso, los datos arrojan que tanto la edad como el sexo son variables influyentes en el salario, por lo tanto se reconoce en un 50% una explicación de esta diferencia en función del sexo. Por otra parte, los datos indican un coeficiente negativo en el caso de la variable sexo, por lo tanto las mujeres en promedio ganarían menos que los hombres.
+
+En conclusión, hay una incidencia en estas variables para poder explicar el fenómeno de la feminización del trabajo doméstico, sin embargo, habría que incluir una perspectiva que permita ahondar en profundidad la repartición de estos cuidados para poder consolidar el fenómeno como tal.
