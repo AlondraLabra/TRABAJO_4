@@ -60,9 +60,11 @@ graph3
 A continuación se presentan modelos de regresiones lineales en primera instancia para conocer los niveles de asociación y dependencia de entre razón y sexo respectivamente. En segundo lugar se aplicó una regresión lineal simple para conocer estos mismos aspectos entre el salario y la edad, elemento que servirá en el análisis en función.
 
 ```{r}
+
+
 reg1 <- lm(razon ~ sexo, data=proc_data)
 
-knitreg(list(reg1))
+knitreg(list(reg1)): asis
 
 ```
 
