@@ -8,7 +8,7 @@
 
 <meta name="author" content="Alondra Labra">
 
-<title>TRABAJO_4</title>
+<title>EXAMEN</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -100,7 +100,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">TRABAJO_4</h1>
+<h1 class="title">EXAMEN</h1>
 </div>
 
 
@@ -126,8 +126,8 @@ div.csl-indent {
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section"></h2>
 </section>
-<section id="la-urgencia-de-mirar-hacia-las-consecuencias-labores-de-cuidado-asignadas-desde-la-colonia-a-mujeres-en-américa-latina" class="level2">
-<h2 class="anchored" data-anchor-id="la-urgencia-de-mirar-hacia-las-consecuencias-labores-de-cuidado-asignadas-desde-la-colonia-a-mujeres-en-américa-latina">La urgencia de mirar hacia las consecuencias: labores de cuidado asignadas desde la colonia a mujeres en América Latina</h2>
+<section id="distribución-en-las-labores-de-cuidado-cómo-se-antepone-el-trabajo-doméstico-ante-el-trabajo-remunerado-formal" class="level2">
+<h2 class="anchored" data-anchor-id="distribución-en-las-labores-de-cuidado-cómo-se-antepone-el-trabajo-doméstico-ante-el-trabajo-remunerado-formal">Distribución en las labores de cuidado; ¿cómo se antepone el trabajo doméstico ante el trabajo remunerado formal?</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"INPUT/proc_data.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -138,16 +138,18 @@ div.csl-indent {
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">p_load</span>(dplyr, sjmisc, car, sjlabelled, stargazer, haven, summarytools, kableExtra, sjPlot, corrplot, sessioninfo, ggplot2, texreg) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>En las últimas décadas ha surgido desde el planteamiento de la teoría feminista una serie de demandas que hacen alusión a distintas formas en las que la violencia de género viene a estar presente en la estructura social latinoamericana. Estas formas se expresan en ámbitos políticos, públicos, privados, culturales; es de alguna forma una violencia sistematizada. En particular, este artículo busca profundizar acerca de una de las formas de violencia de género que se expresa en la vida privada y se condice con las labores de cuidado asignadas a las mujeres como un trabajo no remunerado y que viene a instaurarse desde la colonización, cuyas víctimas fueron mujeres indígenas, tal como lo expresa Mendoza en <span class="citation" data-cites="c.mendoza2023">(<a href="#ref-c.mendoza2023" role="doc-biblioref">C. Mendoza and Catalina Valdés Blanchemin 2023</a>)</span>, de forma específica:</p>
+<p>En las últimas décadas ha surgido desde el planteamiento de la teoría feminista una serie de demandas que hacen alusión a distintas formas en las que la violencia de género viene a estar presente en la estructura social latinoamericana. Estas formas se expresan en ámbitos políticos, públicos, privados, culturales; es de alguna forma una violencia sistematizada.</p>
+<p>En particular, este artículo busca profundizar acerca de una de las formas de violencia de género que se expresa en la vida privada y se condice con las labores de cuidado asignadas a las mujeres como un trabajo no remunerado y que viene a instaurarse desde la colonización, cuyas víctimas fueron mujeres indígenas, tal como lo expresa Mendoza en <span class="citation" data-cites="c.mendoza2023">(<a href="#ref-c.mendoza2023" role="doc-biblioref">C. Mendoza and Catalina Valdés Blanchemin 2023</a>)</span>, de forma específica:</p>
 <p><em>“el posicionamiento de madres indígenas que debían hacerse cargo de sus hijos mestizos y volverse el pilar fundamental de la familia fue un fenómeno común en toda la región que dejó a la mujer como principal sustento del cuidado familiar y responsable de ese tipo de labores”. <span class="citation" data-cites="c.mendoza2023">(<a href="#ref-c.mendoza2023" role="doc-biblioref">C. Mendoza and Catalina Valdés Blanchemin 2023</a>)</span></em></p>
-<p>Para efectos de esta investigación, se entenderá que a menor reconocimiento de las labores de cuidado como un trabajo, mayor es el índice de enfermedades desarrolladas por mujeres cuidadoras, a raíz de lo que debe ser entendido como estrés laboral dada la carencia de normas que regulen el espacio de trabajo (el hogar).</p>
+<p>Para efectos de este trabajo, se busca indagar en la influencia de la presencia en participación en labores de cuidado, crianza o trabajo doméstico para la búsqueda de trabaja remunerado “formal”, considerando que no hay un reconocimiento ni una inserción de las labores del cuidado y de la crianza hacia el mercado laboral, y es por tanto que este no es remunerado.</p>
 <p>Este modelamiento del rol que va a cumplir la mujer en la sociedad latinoamericana va a perpetuar una invisibilización de las labores de cuidado debido a la naturalización y asignación por género del cumplimiento de estos. Asimismo, estas acciones no serán consideradas como un trabajo y por ende no contarán de una remuneración. Es precisamente en este punto donde yace el problema que vamos a investigar: la trascendencia histórica de la asignación de las labores de cuidado hacia las mujeres y sus efectos en la actualidad.</p>
 <p>A lo anteriormente expuesto, debemos considerar que las políticas públicas si bien han intentado hacer frente en menor o mayor grado a esta problemática no han sido lo realmente suficiente, y esto puede deberse en gran medida a la doctrina política liberal que viene a separar lo que sucede en la esfera pública de la esfera privada tal como expone <span class="citation" data-cites="c.mendoza2023">(<a href="#ref-c.mendoza2023" role="doc-biblioref">C. Mendoza and Catalina Valdés Blanchemin 2023</a>)</span>, siendo un problema relegado al interior de las familias e impidiendo la reivindicación de los derechos del cuidado y los derechos laborales de quienes ejercen estos cuidados.</p>
-<p>Al mismo tiempo, las mujeres que se ven envueltas dentro de este fenómeno se ven desprotegidas frente a situaciones de acoso o estrés laboral, pues no existen tales posibilidades de organización de trabajadoras del cuidado como ocurre con otros empleos formalizados y remunerados. Lo anterior ha provocado una precarización de este grupo femenizado que cumple con estas labores que son desempeñadas por mujeres en un 95% de los casos <span class="citation" data-cites="manuelcorreacarrasco2021">(<a href="#ref-manuelcorreacarrasco2021" role="doc-biblioref">Manuel Correa Carrasco and Carrasco 2021</a>)</span> efectos, es importante considerar las labores desde una mirada del trabajo, entendiendo así el entorno como un espacio de trabajo, y en general, las condiciones del hogar como las condiciones del trabajo. De esta forma, surge la posibilidad de evaluar los efectos que tiene la invisibilización y la falta de gestión de esta labor desde la esfera pública. Pues, se expone un alto nivel de estrés laboral, asociado a conductas denigrantes que las trabajadoras domésticas sufren debido a la vulnerabilidad que impone el contexto <span class="citation" data-cites="manuelcorreacarrasco2021">(<a href="#ref-manuelcorreacarrasco2021" role="doc-biblioref">Manuel Correa Carrasco and Carrasco 2021</a>)</span>. Es decir, que surge una precariedad del empleo que exige ser enfrentada bajo la influencia de la esfera pública y política en la regularización, reconocimiento y redistribución de las tareas domésticas como un trabajo.</p>
+<p>Al mismo tiempo, las mujeres que se ven envueltas dentro de este fenómeno se ven desprotegidas frente a situaciones de acoso o estrés laboral, pues no existen tales posibilidades de organización de trabajadoras del cuidado como ocurre con otros empleos formalizados y remunerados. Lo anterior ha provocado una precarización de este grupo femenizado que cumple con estas labores que son desempeñadas por mujeres en un 95% de los casos <span class="citation" data-cites="manuelcorreacarrasco2021">(<a href="#ref-manuelcorreacarrasco2021" role="doc-biblioref">Manuel Correa Carrasco and Carrasco 2021</a>)</span> efectos, es importante considerar las labores desde una mirada del trabajo, entendiendo así el entorno como un espacio de trabajo, y en general, las condiciones del hogar como las condiciones del trabajo. De esta forma, surge la posibilidad de evaluar los efectos que tiene la invisibilización y la falta de gestión de esta labor desde la esfera pública. Pues, se expone un alto nivel de estrés laboral, asociado a conductas denigrantes que las trabajadoras domésticas sufren debido a la vulnerabilidad que impone el contexto <span class="citation" data-cites="manuelcorreacarrasco2021">(<a href="#ref-manuelcorreacarrasco2021" role="doc-biblioref">Manuel Correa Carrasco and Carrasco 2021</a>)</span>.</p>
+<p>Es decir, que surge una precariedad del empleo que exige ser enfrentada bajo la influencia de la esfera pública y política en la regularización, reconocimiento y redistribución de las tareas domésticas como un trabajo.</p>
 <p>Por otra parte, debe considerarse el cuidado de adultos mayores como parte de una labor doméstica que recae en las mujeres, mayoritariamente. Si bien han surgido distintas instancias de creación de programas al fomento del resguardo de la salud para adultos mayores desde los inicios de los 2000’s, según se indica en la agenda <span class="citation" data-cites="nicolebidegainponte2017">(<a href="#ref-nicolebidegainponte2017" role="doc-biblioref">Nicole Bidegain Ponte and Ponte 2017</a>)</span>, donde se exponen distintos parámetros para el resguardo de la salud de adultos mayores, nuevamente quedan exentas las personas cuya responsabilidad social es asumir el acompañamiento y el cuidado de estas personas en distintos niveles de dependencia.</p>
 <p>En último lugar, cabe recalcar que con frecuencia que la realidad de los hogares donde deben ejercerse roles de cuidado tienden a presentar bajos recursos económicos <span class="citation" data-cites="aliciabarcenaAutonomiaEconomicaMujeres2021">(<a href="#ref-aliciabarcenaAutonomiaEconomicaMujeres2021" role="doc-biblioref">Alicia Bárcena and Alicia Bárcena 2021</a>)</span> de modo que, en caso de hogares monoparentales sostenidos por mujeres, la carga pasa a duplicarse, empeorando las condiciones. Por otra parte, las políticas impulsadas por la inserción laboral al grupo de mujeres bajo la misión de una autonomía económica, esconde detrás las mayores cargas de trabajo dadas las condiciones expuestas con anterioridad a las que se ven enfrentadas las mujeres que cumplirían esta doble labor.</p>
 <p>En último lugar, lo que se busca llevar a cabo con esta investigación es la visibilización de un fenómeno precarizador de la vida de las trabajadoras del cuidado. Lo anterior da cuenta de la urgencia que tiene el desarrollo de políticas y programas de intervención con el propósito de regularizar y reconocer esta labor, pues, es finalmente desde la esfera pública que los efectos de esta problemática pueden transformarse, y ayudar a disminuir los níveles de depresión, estrés u otras enfermedades que pueden derivarse por las condiciones del trabajo de cuidados.&nbsp;</p>
-<p>Para lograr llevar a cabo un análisis sustentado de el tema propuesto, se presentará la siguiente tabla que trabaja con una base la base de datos CASEN 2022. En la tabla encontramos datos que sustentan que la búsqueda de trabajo suele verse impedida por las labores de cuidado y por el trabajo doméstico de manera tendenciosa en el grupo de mujeres. Esto se debe a una femeneización del trabajo doméstico acorde a las revisiones realizzadas anteriormente en la asginación de roles y estereotipos de género. Pues, la tabla nos muestra que mientras un grupo de 280 hombres reconocen dedicarse al trabajo doméstico, 7255 mujeres declaran hacerlo y por esta razón que no han buscado trabajo. Es decir, tan sólo el 3% de hombres se dedican al trabajo doméstico en relación a las mujeres.</p>
+<p>Para lograr llevar a cabo un análisis sustentado de el tema propuesto, se presentará la siguiente tabla que trabaja con una base la base de datos CASEN 2022. En la tabla encontramos datos que sustentan que la búsqueda de trabajo suele verse impedida por las labores de cuidado y por el trabajo doméstico de manera tendenciosa en el grupo de mujeres. Esto, acorde a la literatura se debe a una femeneización del trabajo doméstico acorde a las revisiones realizadas anteriormente en la asginación de roles y estereotipos de género. Lo que la tabla nos muestra es que mientras un grupo de 280 hombres reconocen dedicarse al trabajo doméstico, 7255 mujeres declaran hacerlo y por esta razón que no han buscado trabajo. Es decir, de aquellas personas que se dedican al trabajo, tan sólo el 3% son hombres.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tabla <span class="ot">&lt;-</span> <span class="fu">sjt.xtab</span>(proc_data<span class="sc">$</span>razon, proc_data<span class="sc">$</span>sexo, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>) </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tabla</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -225,7 +227,7 @@ div.csl-indent {
 </tbody></table>
 </div>
 </div>
-<p>Además, el siguiente gráfico nos proporciona información para sustentar este fenómeno en la medida que las mujeres corresponde al grupo con menor recurrencia a buscar un trabajo. Siendo quienes buscan un trabajo con menor recurrencia en al menos un 25% de los casos en relación a los hombres.</p>
+<p>Además, el siguiente gráfico nos proporciona información para sustentar esta perspectiva en la medida que las mujeres corresponde al grupo con menor recurrencia a buscar un trabajo. Siendo quienes buscan un trabajo con menor recurrencia en al menos un 25% de los casos en relación a los hombres. Este argumento se sustenta en la interpretación grafica de que el grupo de mujeres se halla más cercano al 1, que es precisamente donde se concentran la mayoría de los casos.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>graph3 <span class="ot">&lt;-</span> proc_data <span class="sc">%&gt;%</span> </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> busc_trab, <span class="at">fill =</span> sexo)) <span class="sc">+</span>    </span>
@@ -253,7 +255,10 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>A continuación se presentan modelos de regresiones lineales en primera instancia para conocer los niveles de asociación y dependencia de entre razón y sexo respectivamente. En segundo lugar se aplicó una regresión lineal simple para conocer estos mismos aspectos entre el salario y la edad, elemento que servirá en el análisis en función.</p>
+</section>
+<section id="regresiones-lineales-el-trabajo-doméstico-y-la-crianza-condicionan-la-búsqueda-de-trabajo-remunerado." class="level2">
+<h2 class="anchored" data-anchor-id="regresiones-lineales-el-trabajo-doméstico-y-la-crianza-condicionan-la-búsqueda-de-trabajo-remunerado.">Regresiones lineales; el trabajo doméstico y la crianza condicionan la búsqueda de trabajo remunerado.</h2>
+<p>A continuación se presentan modelos de regresiones lineales, en primera instancia para conocer los niveles de asociación y dependencia de entre razón y sexo respectivamente. En segundo lugar se aplicó una regresión lineal simple para conocer estos mismos aspectos entre el salario y la edad, elemento que servirá en el análisis en función.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>reg1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(razon <span class="sc">~</span> sexo, <span class="at">data=</span>proc_data)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -411,8 +416,8 @@ div.csl-indent {
 <p>Este modelo nos explica que hay una tendencia en la búsqueda de trabajo más elevada hacia el grupo de hombres, sin embargo no hay un comportamiento significativo en las variables que pueda explicar si es efectiva la dependencia de la búsqueda de trabajo en función del sexo.</p>
 <p>A continuación se presenta un modelo de regresión lineal múltiple, con el que se busca indagar de manera simultánea las incidencias de distintas variables en el fenómeno de la permanencia en el trabajo doméstico y de crianza.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>reg4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(busc_trab <span class="sc">~</span> razon <span class="sc">+</span> sexo, <span class="at">data=</span>proc_data)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>reg5 <span class="ot">&lt;-</span> <span class="fu">lm</span>(sexo <span class="sc">~</span> salario <span class="sc">+</span> edad, <span class="at">data=</span>proc_data)</span>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>reg4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(sexo <span class="sc">~</span> razon <span class="sc">+</span> busc_trab, <span class="at">data=</span>proc_data)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>reg5 <span class="ot">&lt;-</span> <span class="fu">lm</span>(sexo <span class="sc">~</span> busc_trab <span class="sc">+</span> edad, <span class="at">data=</span>proc_data)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">knitreg</span>(<span class="fu">list</span>(reg4))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -427,7 +432,7 @@ div.csl-indent {
 &lt;tbody&gt;
 &lt;tr style="border-top: 1px solid #000000;"&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(Intercept)&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;2.00&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;1.85&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
@@ -435,15 +440,7 @@ div.csl-indent {
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;razon&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.00&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.00)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;sexo&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.00&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.02&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
@@ -451,11 +448,11 @@ div.csl-indent {
 &lt;/tr&gt;
 &lt;tr style="border-top: 1px solid #000000;"&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.50&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.03&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;Adj. R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.50&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.03&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr style="border-bottom: 2px solid #000000;"&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;Num. obs.&lt;/td&gt;
@@ -482,23 +479,23 @@ div.csl-indent {
 &lt;tbody&gt;
 &lt;tr style="border-top: 1px solid #000000;"&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(Intercept)&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;1.47&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;1.94&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.01)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;salario&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.00&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;busc_trab&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.19&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.00)&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.01)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;edad25-34 años&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.05&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.17&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
@@ -506,7 +503,7 @@ div.csl-indent {
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;edad35-44 años&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.07&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.23&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
@@ -514,7 +511,7 @@ div.csl-indent {
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;edad45-54 años&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.06&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.23&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
@@ -522,23 +519,23 @@ div.csl-indent {
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;edad55 o más años&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.04&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.09&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.01)&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.00)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr style="border-top: 1px solid #000000;"&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.01&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.04&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;Adj. R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.01&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.04&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr style="border-bottom: 2px solid #000000;"&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;Num. obs.&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;61284&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;72939&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;tfoot&gt;
@@ -552,16 +549,15 @@ div.csl-indent {
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">custom.model.names =</span> <span class="fu">c</span>(<span class="st">"Modelo 1"</span>,</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Modelo 2"</span>),</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">custom.note =</span> <span class="st">"*** p &lt; 0.001; ** p &lt; 0.01; * p &lt; 0.05"</span>,</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">custom.coef.names =</span> <span class="fu">c</span>(<span class="st">"Intercepto"</span>, </span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">custom.coef.names =</span> <span class="fu">c</span>(<span class="st">"Intercept"</span>, </span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"razon"</span>,</span>
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Mujer &lt;br&gt; &lt;i&gt;(Ref. Hombre)&lt;/i&gt;"</span>,</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"salario"</span>,</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"edad25-34 años"</span>,</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"edad35-44 años"</span>,</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"edad45-54 años"</span>,</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"edad55 o más años"</span>),</span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">caption =</span> <span class="st">"Razones por para la búsqueda de trabajo según edad y sexo"</span>,</span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">caption.above =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"búsqueda de trabajo"</span>,</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"edad25-44 años"</span>,</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"edad45-54 años"</span>,</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"edad55 o más años"</span>),</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">caption =</span> <span class="st">"Razones por para la búsqueda de trabajo según edad y sexo"</span>,</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">caption.above =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;table class="texreg" style="margin: 10px auto;border-collapse: collapse;border-spacing: 0px;color: #000000;border-top: 2px solid #000000;"&gt;
 &lt;caption&gt;Razones por para la búsqueda de trabajo según edad y sexo&lt;/caption&gt;
@@ -574,9 +570,9 @@ div.csl-indent {
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr style="border-top: 1px solid #000000;"&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;Intercepto&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;2.00&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;1.47&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;Intercept&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;1.85&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;1.94&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
@@ -585,7 +581,7 @@ div.csl-indent {
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;razon&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.00&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.02&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -595,28 +591,8 @@ div.csl-indent {
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;Mujer &lt;br&gt; &lt;i&gt;(Ref. Hombre)&lt;/i&gt;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.00&lt;/td&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.00)&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;salario&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.00&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.00)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;edad25-34 años&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.05&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.19&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
@@ -624,9 +600,19 @@ div.csl-indent {
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.01)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;edad35-44 años&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;búsqueda de trabajo&lt;/td&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.07&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.17&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.01)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;edad25-44 años&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.23&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
@@ -636,7 +622,7 @@ div.csl-indent {
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;edad45-54 años&lt;/td&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.06&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.23&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
@@ -646,27 +632,27 @@ div.csl-indent {
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;edad55 o más años&lt;/td&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;-0.04&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.09&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.01)&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;(0.00)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr style="border-top: 1px solid #000000;"&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.50&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.01&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.03&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.04&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;Adj. R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.50&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.01&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.03&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;0.04&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr style="border-bottom: 2px solid #000000;"&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;Num. obs.&lt;/td&gt;
 &lt;td style="padding-left: 5px;padding-right: 5px;"&gt;72214&lt;/td&gt;
-&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;61284&lt;/td&gt;
+&lt;td style="padding-left: 5px;padding-right: 5px;"&gt;72939&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;tfoot&gt;
@@ -677,8 +663,8 @@ div.csl-indent {
 &lt;/table&gt;</code></pre>
 </div>
 </div>
-<p>En este caso, los datos arrojan que tanto la edad como el sexo son variables influyentes en el salario, por lo tanto se reconoce en un 50% una explicación de esta diferencia en función del sexo. Por otra parte, los datos indican un coeficiente negativo en el caso de la variable sexo, por lo tanto las mujeres en promedio ganarían menos que los hombres.</p>
-<p>En conclusión, hay una incidencia en estas variables para poder explicar el fenómeno de la feminización del trabajo doméstico, sin embargo, habría que incluir una perspectiva que permita ahondar en profundidad la repartición de estos cuidados para poder consolidar el fenómeno como tal.</p>
+<p>En este caso, el modelo nos indica que la variable razón es estadísticamente significativa, e influye en la búsqueda de trabajo remunerado, al menos en nuestro primer modelo (nivel de significancia de p &lt; 0.001).</p>
+<p>En modo de conclusión, hay una importancia estadística de la variable razón para poder explicar cómo se condiciona la búsqueda de trabajo, pues en gran medida estas categorías influyen en la decisión de buscar o no trabajo. Sin embargo, cabe mencionar que el modelo no es lo suficientemente especifico para explicar los sesgos de género que se hallan en esta problemática. Al mismo tiempo, esto nos dirige a indagar en las proporciones de influencia a partir del género, cabría al mismo tiempo investigar sobre la distribución de género a partir de las categorías específicas de la variable razón, que esconde detrás los argumentos por los cuales no se busca un trabajo remunerado.</p>
 
 </section>
 

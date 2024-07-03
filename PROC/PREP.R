@@ -1,5 +1,5 @@
 library(pacman)
-pacman::p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, texreg)
+pacman::p_load(dplyr, sjmisc, car, sjlabelled, stargazer, haven, texreg, ggplot2, corrplot)
 
 load("INPUT/proc_data.RData")
 
@@ -60,5 +60,24 @@ knitreg(list(reg4, reg5),
         caption = "Razones por para la búsqueda de trabajo según edad y sexo",
         caption.above = TRUE)
 
+corrplot.mixed(cor(select(proc_data,  busc_trab, edad, sexo),
+                   use = "complete.obs"))
+
 save(proc_data, file="proc_data.RData")
+
+##PRESENTACIÓN QUARTO
+graph3 <- proc_data %>% 
+  ggplot(aes(x = busc_trab, fill = sexo)) +    
+  geom_bar() +  
+  xlab("Búsqueda de trabajo") +
+  ylab("Cantidad") +
+  labs(fill = "Sexo") +
+  scale_fill_discrete(labels = c('Hombre', 'Mujer'))
+
+graph3
+
+ruta_grafico <- file.path("output", "graph3.png")
+
+
+png(filename = ruta_grafico)
 

@@ -1,0 +1,2 @@
+"0","tabla <- sjt.xtab(proc_data$razon, proc_data$sexo, encoding = ""UTF-8"") "
+"0","tabla"

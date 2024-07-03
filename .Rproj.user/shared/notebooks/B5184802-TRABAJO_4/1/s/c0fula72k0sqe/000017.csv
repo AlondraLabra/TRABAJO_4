@@ -1,0 +1,39 @@
+"0","knitreg(list(reg4, reg5), 
+        custom.model.names = c(""Modelo 1"",
+                               ""Modelo 2""),
+        custom.note = ""*** p < 0.001; ** p < 0.01; * p < 0.05"",
+        custom.coef.names = c(""Intercept"", 
+                              ""razon"",
+                              ""Mujer <br> <i>(Ref. Hombre)</i>"",
+                              ""búsqueda de trabajo"",
+                              ""edad25-44 años"",
+                              ""edad45-54 años"",
+                              ""edad55 o más años""),
+        caption = ""Razones por para la búsqueda de trabajo según edad y sexo"",
+        caption.above = TRUE)
+"
+"1","
+===========================================================
+                                 Modelo 1      Modelo 2    
+-----------------------------------------------------------
+Intercept                            1.85 ***      1.94 ***
+                                    (0.00)        (0.01)   
+razon                               -0.02 ***              
+                                    (0.00)                 
+Mujer <br> <i>(Ref. Hombre)</i>                   -0.19 ***
+                                                  (0.01)   
+búsqueda de trabajo                                0.17 ***
+                                                  (0.01)   
+edad25-44 años                                     0.23 ***
+                                                  (0.01)   
+edad45-54 años                                     0.23 ***
+                                                  (0.01)   
+edad55 o más años                                  0.09 ***
+                                                  (0.00)   
+-----------------------------------------------------------
+R^2                                  0.03          0.04    
+Adj. R^2                             0.03          0.04    
+Num. obs.                        72214         72939       
+===========================================================
+*** p < 0.001; ** p < 0.01; * p < 0.05
+"
